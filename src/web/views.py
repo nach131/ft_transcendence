@@ -12,6 +12,12 @@ def botones(req):
 
 
 def about_us(req):
-    # daabout_usta = {"nombre": "Pedro", "apellido": "Papiedrra", "edad": 42}
-    # return render(req, "toma.html", {"data": data})
     return render(req, "about_us/index.html")
+
+
+def start(req):
+    return render(req, "start/index.html")
+
+
+def start2(req):
+    return render(req, "start2/index.html")
