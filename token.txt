@@ -1,0 +1,7 @@
+UIP="u-s4t2ud-66a86bd9eac111476763fa63b28a5d291aacfbe8c6d60029b9042c28004c6ad6"
+SECRET="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"
+
+
+curl -X POST --data "grant_type=client_credentials&client_id=u-s4t2ud-66a86bd9eac111476763fa63b28a5d291aacfbe8c6d60029b9042c28004c6ad6&client_secret=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" https://api.intra.42.fr/oauth/token
+
+{"access_token":"c0aaa87cc9baa58efd1ca0abacf9db95d454f923b302850b0074f83528b1fa21","token_type":"bearer","expires_in":7200,"scope":"public","created_at":1717362032,"secret_valid_until":1719780273}%
