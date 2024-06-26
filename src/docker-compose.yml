@@ -1,0 +1,46 @@
+
+services:
+  app_tr:
+    container_name: app_tr
+    build:
+      context: .
+      args:
+        - DEV=true
+    ports:
+      - "8008:8008"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8008"
+    environment:
+      - DB_HOST=db_tr
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=tomate
+    depends_on:
+      - db_tr
+
+  db_tr:
+    container_name: db_tr
+    image: postgres:13-alpine
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=tomate
+
+  adminer_tr:
+    container_name: adminer_tr
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  db_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./data/db
+      o: bind
