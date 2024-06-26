@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Party</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://use.typekit.net/htw6kjt.css'>
+  <link rel="stylesheet" href="{% static '/start2/style.css' %}">
+
+</head>
+
+<body>
+  <main>
+    <article>
+      <h1 split-by="letter" letter-animation="breath">transcendence</h1>
+      <h2>Lets Go !!!</h2>
+    </article>
+
+  </main>
+  <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+  <script type="module" src="{% static '/start2/script.js' %}"></script>
+
+</body>
+
+</html>
