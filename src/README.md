@@ -7,7 +7,7 @@ para saber los error de syntax en el codido
 
  Para testear Django
 
- docker compose run --rm app sh -c "python manage.py test"
+ docker compose run --rm app_tr sh -c "python manage.py test"
 
 lanzar docker para crear el proyeto, docker se para y se borra
 
